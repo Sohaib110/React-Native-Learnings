@@ -1,11 +1,11 @@
 import { View, Text, Button } from 'react-native';
 import React from 'react';
 // import First from './src/components/First';
-import ContactListScreen from './src/screens/contact/ContactListScreen';
+import Grid from './src/components/Grid';
 
 const App = () => {
   return (
-    <View>
+    <View style={{ flex: 1 }}>
       {/* <Text
         style={{
           fontSize: 24,
@@ -28,7 +28,7 @@ const App = () => {
       </Text>
       <Button title="Click Me" />
       <First /> */}
-      <ContactListScreen />
+      <Grid />
     </View>
   );
 };
