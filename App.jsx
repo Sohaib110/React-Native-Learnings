@@ -1,7 +1,6 @@
 import { View, Text, Button } from 'react-native';
 import React from 'react';
-// import First from './src/components/First';
-import Grid from './src/components/Grid';
+import UseEffectHookUnmountingPhase from './src/components/UseEffectHookUnmountingPhase';
 
 const App = () => {
   return (
@@ -28,7 +27,7 @@ const App = () => {
       </Text>
       <Button title="Click Me" />
       <First /> */}
-      <Grid />
+      <UseEffectHookUnmountingPhase />
     </View>
   );
 };
