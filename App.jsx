@@ -1,6 +1,6 @@
 import { View, Text, Button } from 'react-native';
 import React from 'react';
-import UseEffectHookUnmountingPhase from './src/components/UseEffectHookUnmountingPhase';
+import HideShowToggle from './src/components/HideShowToggle';
 
 const App = () => {
   return (
@@ -27,7 +27,7 @@ const App = () => {
       </Text>
       <Button title="Click Me" />
       <First /> */}
-      <UseEffectHookUnmountingPhase />
+      <HideShowToggle />
     </View>
   );
 };

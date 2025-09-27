@@ -10,7 +10,7 @@ const UseEffectHookUnmountingPhase = () => {
       {showChild ? <ShowChild /> : null}
       <Button
         title="Child Component"
-        onPress={() => setShowChild(!showChild)}
+        onPress={() => setShowChild(!showChild)}  
       />
     </View>
   );
