@@ -1,11 +1,11 @@
 import { View, Text, Button } from 'react-native';
 import React from 'react';
-import StatusBarExample from './src/components/StatusBarExample';
+import UseRefHook from './src/components/UseRefHook';
 
 const App = () => {
   return (
     <View style={{ flex: 1 }}>
-      <StatusBarExample />
+      <UseRefHook />
     </View>
   );
 };
