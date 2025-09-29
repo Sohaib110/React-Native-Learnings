@@ -1,11 +1,11 @@
 import { View, Text, Button } from 'react-native';
 import React from 'react';
-import Loader from './src/components/Loader';
+import StatusBarExample from './src/components/StatusBarExample';
 
 const App = () => {
   return (
     <View style={{ flex: 1 }}>
-      <Loader />
+      <StatusBarExample />
     </View>
   );
 };
