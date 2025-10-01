@@ -1,11 +1,11 @@
 import { View, Text, Button } from 'react-native';
 import React from 'react';
-import GET_API_LIST from './src/components/GET_API_LIST';
+import PlatformExample from './src/components/PlatformExample';
 
 const App = () => {
   return (
     <View style={{ flex: 1 }}>
-      <GET_API_LIST />
+      <PlatformExample />
     </View>
   );
 };
