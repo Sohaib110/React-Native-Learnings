@@ -3,7 +3,7 @@ import { useSafeAreaInsets } from 'react-native-safe-area-context';
 import React from 'react';
 
 const Home = ({ navigation }) => {
-  const insets = useSafeAreaInsets(); // gives you { top, bottom, left, right }
+  const insets = useSafeAreaInsets();
 
   return (
     <View style={{ flex: 1, paddingTop: insets.top }}>
