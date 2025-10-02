@@ -1,11 +1,11 @@
 import { View, Text, Button } from 'react-native';
 import React from 'react';
-import PlatformExample from './src/components/PlatformExample';
+import Search from './src/components/Search';
 
 const App = () => {
   return (
     <View style={{ flex: 1 }}>
-      <PlatformExample />
+      <Search />
     </View>
   );
 };
