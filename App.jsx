@@ -1,13 +1,13 @@
 import React from 'react';
 import { StyleSheet } from 'react-native';
 import { SafeAreaProvider, SafeAreaView } from 'react-native-safe-area-context';
-import AsyncStorage from './src/components/AsyncStorage';
+import ImageExample from './src/components/ImageExample';
 
 const App = () => {
   return (
     <SafeAreaProvider>
       <SafeAreaView style={styles.container} edges={['top', 'left', 'right']}>
-        <AsyncStorage />
+        <ImageExample />
       </SafeAreaView>
     </SafeAreaProvider>
   );
