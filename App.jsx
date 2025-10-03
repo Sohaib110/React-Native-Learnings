@@ -1,47 +1,46 @@
-import { NavigationContainer } from '@react-navigation/native';
-import { createNativeStackNavigator } from '@react-navigation/native-stack';
+import 'react-native-gesture-handler';
 import React from 'react';
-import About from './src/navigation-screens/About';
-import Home from './src/navigation-screens/Home';
-import Login from './src/navigation-screens/Login';
-import MyHeader from './src/navigation-screens/MyHeader';
-import { Button, Alert } from 'react-native';
-import Example from './src/navigation-screens/Example';
+import { createDrawerNavigator } from '@react-navigation/drawer';
+import { NavigationContainer } from '@react-navigation/native';
+import { View, Text, Button } from 'react-native';
 
-const Stack = createNativeStackNavigator();
-const sayHello = () => {
-  Alert.alert('Hello');
-};
-// const HeaderLeft = () => <Button title="One" onPress={sayHello} />;
-// const HeaderRight = () => <Button title="Two" onPress={sayHello} />;
-const MyExample = () => <Example />;
+const Drawer = createDrawerNavigator();
+const HomeScreen = ({ navigation }) => (
+  <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
+    <Text>Home Screen</Text>
+    <Button title="Open Drawer" onPress={() => navigation.openDrawer()} />
+  </View>
+);
+const ProfileScreen = ({ navigation }) => (
+  <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
+    <Text>Profile Screen</Text>
+    <Button title="Open Drawer" onPress={() => navigation.openDrawer()} />
+  </View>
+);
+const SettingsScreen = ({ navigation }) => (
+  <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
+    <Text>Settings Screen</Text>
+    <Button title="Open Drawer" onPress={() => navigation.openDrawer()} />
+  </View>
+);
 
 const App = () => {
   return (
     <NavigationContainer>
-      <Stack.Navigator>
-        <Stack.Screen
-          name="Header"
-          component={MyHeader}
-          options={{
-            title: '',
-            headerLeft: MyExample,
-            // headerRight: HeaderRight,
-
-            // headerLeft: () => <Button title="One" />,
-            // headerRight: () => <Button title="Two" />,
-          }}
-        />
-        <Stack.Screen name="Login" component={Login} />
-        <Stack.Screen
-          name="Home"
-          component={Home}
-          options={{ headerShown: false }}
-        />
-        <Stack.Screen name="About" component={About} />
-      </Stack.Navigator>
+      <Drawer.Navigator
+        screenOptions={{
+          drawerStyle: { backgroundColor: '#e6e6e6', width: 240 },
+          drawerLabelStyle: { fontSize: 18, color: '#333' },
+          headerStyle: { backgroundColor: '#f4511e' },
+          headerTintColor: '#fff',
+          headerTitleAlign: 'center',
+        }}
+      >
+        <Drawer.Screen name="Home" component={HomeScreen} />
+        <Drawer.Screen name="Profile" component={ProfileScreen} />
+        <Drawer.Screen name="Settings" component={SettingsScreen} />
+      </Drawer.Navigator>
     </NavigationContainer>
   );
 };
-
 export default App;
