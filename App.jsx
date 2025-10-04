@@ -7,7 +7,7 @@ const App = () => {
   return (
     <SafeAreaProvider>
       <SafeAreaView style={styles.container} edges={['top', 'left', 'right']}>
-        <Parent />
+        
       </SafeAreaView>
     </SafeAreaProvider>
   );
