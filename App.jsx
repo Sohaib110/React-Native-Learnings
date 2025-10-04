@@ -1,18 +1,13 @@
 import React from 'react';
 import { StyleSheet } from 'react-native';
 import { SafeAreaProvider, SafeAreaView } from 'react-native-safe-area-context';
-import { Provider } from 'react-redux';
-import Counter from './src/components/Counter';
-import { store } from './src/redux/store/store';
-
+import One from './src/components/One';
 
 const App = () => {
   return (
     <SafeAreaProvider>
       <SafeAreaView style={styles.container} edges={['top', 'left', 'right']}>
-        <Provider store={store}>
-          <Counter />
-        </Provider>
+        <One />
       </SafeAreaView>
     </SafeAreaProvider>
   );
