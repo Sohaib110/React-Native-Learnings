@@ -1,22 +1,10 @@
 import React from 'react';
-import { StyleSheet } from 'react-native';
-import { SafeAreaProvider, SafeAreaView } from 'react-native-safe-area-context';
-import One from './src/components/One';
+import { View, Text } from 'react-native';
 
-const App = () => {
+export default function App() {
   return (
-    <SafeAreaProvider>
-      <SafeAreaView style={styles.container} edges={['top', 'left', 'right']}>
-        <One />
-      </SafeAreaView>
-    </SafeAreaProvider>
+    <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
+      <Text>Hello World</Text>
+    </View>
   );
-};
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-  },
-});
-
-export default App;
+}
